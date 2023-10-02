@@ -13,7 +13,7 @@ export class UserService {
     
     async createUser(userDto:UserDto):Promise<UserDto>{
 
-       const existingUser = await this.userModel.findOne({email:userDto.email});
+       const existingUser = await this.findByEmail(userDto.email);
        if (existingUser) {
         throw new HttpException('User with this email already exists',400)
        }
