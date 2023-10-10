@@ -5,13 +5,15 @@ import { UserModule } from './user/user.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { AuthModule } from './auth/auth.module';
 import { BlogPostModule } from './blog-post/blog-post.module';
+import { CommentModule } from './comment/comment.module';
 
 @Module({
   imports: [ConfigModule.forRoot({ envFilePath:'.env',isGlobal: true,}),
   MongooseModule.forRoot(process.env.mongoDBURI),
   UserModule,
   AuthModule,
-  BlogPostModule],
+  BlogPostModule,
+  CommentModule],
   controllers: [AppController],
   providers: [],
 })
