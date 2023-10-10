@@ -39,7 +39,7 @@ export class UserService {
     }
 
     async removeUser(id:string){
-        this.userModel.updateOne()
+        // this.userModel.updateOne()
         return this.userModel.findByIdAndRemove(new mongoose.Types.ObjectId(id));
     }
 

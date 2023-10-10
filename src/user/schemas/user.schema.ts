@@ -21,7 +21,7 @@ export class User{
 
    @ApiProperty()
    @IsNotEmpty()
-   @Length(15)
+   @Length(8)
    @Prop({required:true})
    password : string;
 

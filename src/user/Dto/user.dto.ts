@@ -18,7 +18,7 @@ export class UserDto{
  
     @ApiProperty()
     @IsNotEmpty()
-    @Length(15)
+    @Length(8)
     @Prop({required:true})
     password : string;
  
@@ -51,7 +51,7 @@ export class UserResponseMongoDto{
  
     @ApiProperty()
     @IsNotEmpty()
-    @Length(15)
+    @Length(8)
     @Prop({required:true})
     password : string;
  
