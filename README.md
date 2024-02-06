@@ -62,10 +62,10 @@ JWT_SECRET=your_jwt_secret
 
 Usage
 1. Start the server:
-```bash
-npm start
-# or
-yarn start
+    ```bash
+    npm start
+    # or
+    yarn start
 
 2. The server will start running at http://localhost:3000 (or your specified port).
 
