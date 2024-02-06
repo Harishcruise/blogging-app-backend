@@ -39,7 +39,7 @@ Before running the application, ensure you have the following installed:
 
 Installation
 1. Clone this repository:
-git clone https://github.com/your-username/blogging-app-backend.git
+git clone https://github.com/Harishcruise/blogging-app-backend.git
 
 2. Navigate into the project directory:
 cd blogging-app-backend
