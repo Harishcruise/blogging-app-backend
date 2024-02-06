@@ -62,6 +62,7 @@ JWT_SECRET=your_jwt_secret
 
 Usage
 1. Start the server:
+```bash
 npm start
 # or
 yarn start
