@@ -22,52 +22,70 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+Blogging App Backend with NestJS
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+This is the backend component of a blogging application built using NestJS. It provides functionalities such as authentication, user management, commenting, and managing blog posts.
 
-## Installation
+Features
+- Authentication: Users can sign up, log in, and authenticate using JWT tokens.
+- User Management: CRUD operations for managing users.
+- Blog Posts: Create, read, update, and delete blog posts.
+- Comments: Users can comment on blog posts.
 
-```bash
-$ npm install
-```
+Prerequisites
+Before running the application, ensure you have the following installed:
+- Node.js (>=12.x)
+- npm or Yarn
 
-## Running the app
+Installation
+1. Clone this repository:
+git clone https://github.com/your-username/blogging-app-backend.git
 
-```bash
-# development
-$ npm run start
+2. Navigate into the project directory:
+cd blogging-app-backend
 
-# watch mode
-$ npm run start:dev
+3. Install dependencies:
+npm install
+# or
+yarn install
 
-# production mode
-$ npm run start:prod
-```
+Configuration
+1. Create a .env file in the root directory of the project.
 
-## Test
+2. Define environment variables:
+PORT=3000
+DATABASE_URL=your_database_url
+JWT_SECRET=your_jwt_secret
 
-```bash
-# unit tests
-$ npm run test
+- mongoDBURI: URL of your database.
+- secret-key: Secret key for JWT token generation.
 
-# e2e tests
-$ npm run test:e2e
+Usage
+1. Start the server:
+npm start
+# or
+yarn start
 
-# test coverage
-$ npm run test:cov
-```
+2. The server will start running at http://localhost:3000 (or your specified port).
 
-## Support
+API Endpoints
+- Authentication:
+  - POST /auth/signup: Create a new user.
+  - POST /auth/login: Log in and receive JWT token.
+- Users:
+  - GET /users: Get all users.
+  - GET /users/:id: Get user by ID.
+  - PUT /users/:id: Update user details.
+  - DELETE /users/:id: Delete user.
+- Blog Posts:
+  - GET /posts: Get all blog posts.
+  - GET /posts/:id: Get blog post by ID.
+  - POST /posts: Create a new blog post.
+  - PUT /posts/:id: Update blog post.
+  - DELETE /posts/:id: Delete blog post.
+- Comments:
+  - GET /posts/:postId/comments: Get all comments for a specific post.
+  - POST /posts/:postId/comments: Add a comment to a post.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+Contributing
+Contributions are welcome! Feel free to open issues or submit pull requests.
